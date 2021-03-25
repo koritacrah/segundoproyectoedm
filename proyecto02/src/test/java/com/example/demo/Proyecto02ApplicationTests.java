@@ -1,13 +1,21 @@
 package com.example.demo;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootTest
-class Proyecto02ApplicationTests {
+import com.example.demo.controler.*;
+import com.example.demo.model.*;
+@SuppressWarnings("unused")
+@SpringBootApplication
 
-	@Test
-	void contextLoads() {
+ 
+public class Proyecto02ApplicationTests {
+	public static void main(String[] args){
+		SpringApplication.run(Proyecto02ApplicationTests.class, args);
+
+		CalculadoraControler nuevoControlador = new CalculadoraControler();
+		nuevoControlador.resolverSuma();
 	}
 
+	
 }
